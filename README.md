@@ -1,6 +1,6 @@
 # MarcusChart
 by Marcus McConnell
-Email: marcus (at) marcusmcconnel.com
+Email: marcus (at) marcusmcconnell.com
 
 Coding Exercise:
 * Reads a JSON file containing stock price data for closing dates
