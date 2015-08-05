@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77FBC15E1B72BA56003A3C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */; };
+		77FBC1601B72BA56003A3C3F /* ChartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15F1B72BA56003A3C3F /* ChartScene.swift */; };
+		77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1611B72BA56003A3C3F /* ChartScene.sks */; };
+		77FBC1641B72BA56003A3C3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1631B72BA56003A3C3F /* Images.xcassets */; };
+		77FBC1671B72BA56003A3C3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1651B72BA56003A3C3F /* MainMenu.xib */; };
+		77FBC1731B72BA56003A3C3F /* MarcusChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1721B72BA56003A3C3F /* MarcusChartTests.swift */; };
+		77FBC17D1B72BD14003A3C3F /* DataNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC17C1B72BD14003A3C3F /* DataNode.swift */; };
+		77FBC17F1B72BF22003A3C3F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC17E1B72BF22003A3C3F /* Constants.swift */; };
+		77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1801B72C50F003A3C3F /* stockprices.json */; };
+		77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1821B72C618003A3C3F /* DataLoader.swift */; };
+		77FBC1861B72D158003A3C3F /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1851B72D158003A3C3F /* DataSet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77FBC16D1B72BA56003A3C3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77FBC1501B72BA56003A3C3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77FBC1571B72BA56003A3C3F;
+			remoteInfo = MarcusChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77FBC1581B72BA56003A3C3F /* MarcusChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcusChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77FBC15C1B72BA56003A3C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77FBC15F1B72BA56003A3C3F /* ChartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartScene.swift; sourceTree = "<group>"; };
+		77FBC1611B72BA56003A3C3F /* ChartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ChartScene.sks; sourceTree = "<group>"; };
+		77FBC1631B72BA56003A3C3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		77FBC1661B72BA56003A3C3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		77FBC16C1B72BA56003A3C3F /* MarcusChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarcusChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77FBC1711B72BA56003A3C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77FBC1721B72BA56003A3C3F /* MarcusChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarcusChartTests.swift; sourceTree = "<group>"; };
+		77FBC17C1B72BD14003A3C3F /* DataNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataNode.swift; sourceTree = "<group>"; };
+		77FBC17E1B72BF22003A3C3F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		77FBC1801B72C50F003A3C3F /* stockprices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockprices.json; sourceTree = "<group>"; };
+		77FBC1821B72C618003A3C3F /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		77FBC1851B72D158003A3C3F /* DataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77FBC1551B72BA56003A3C3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77FBC1691B72BA56003A3C3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77FBC14F1B72BA56003A3C3F = {
+			isa = PBXGroup;
+			children = (
+				77FBC15A1B72BA56003A3C3F /* MarcusChart */,
+				77FBC16F1B72BA56003A3C3F /* MarcusChartTests */,
+				77FBC1591B72BA56003A3C3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77FBC1591B72BA56003A3C3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC1581B72BA56003A3C3F /* MarcusChart.app */,
+				77FBC16C1B72BA56003A3C3F /* MarcusChartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77FBC15A1B72BA56003A3C3F /* MarcusChart */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */,
+				77FBC17E1B72BF22003A3C3F /* Constants.swift */,
+				77FBC15F1B72BA56003A3C3F /* ChartScene.swift */,
+				77FBC1611B72BA56003A3C3F /* ChartScene.sks */,
+				77FBC1631B72BA56003A3C3F /* Images.xcassets */,
+				77FBC1651B72BA56003A3C3F /* MainMenu.xib */,
+				77FBC1841B72D05E003A3C3F /* Data */,
+				77FBC15B1B72BA56003A3C3F /* Supporting Files */,
+			);
+			path = MarcusChart;
+			sourceTree = "<group>";
+		};
+		77FBC15B1B72BA56003A3C3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC15C1B72BA56003A3C3F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77FBC16F1B72BA56003A3C3F /* MarcusChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC1721B72BA56003A3C3F /* MarcusChartTests.swift */,
+				77FBC1701B72BA56003A3C3F /* Supporting Files */,
+			);
+			path = MarcusChartTests;
+			sourceTree = "<group>";
+		};
+		77FBC1701B72BA56003A3C3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC1711B72BA56003A3C3F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77FBC1841B72D05E003A3C3F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC17C1B72BD14003A3C3F /* DataNode.swift */,
+				77FBC1821B72C618003A3C3F /* DataLoader.swift */,
+				77FBC1801B72C50F003A3C3F /* stockprices.json */,
+				77FBC1851B72D158003A3C3F /* DataSet.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77FBC1571B72BA56003A3C3F /* MarcusChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77FBC1761B72BA56003A3C3F /* Build configuration list for PBXNativeTarget "MarcusChart" */;
+			buildPhases = (
+				77FBC1541B72BA56003A3C3F /* Sources */,
+				77FBC1551B72BA56003A3C3F /* Frameworks */,
+				77FBC1561B72BA56003A3C3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarcusChart;
+			productName = MarcusChart;
+			productReference = 77FBC1581B72BA56003A3C3F /* MarcusChart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77FBC16B1B72BA56003A3C3F /* MarcusChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77FBC1791B72BA56003A3C3F /* Build configuration list for PBXNativeTarget "MarcusChartTests" */;
+			buildPhases = (
+				77FBC1681B72BA56003A3C3F /* Sources */,
+				77FBC1691B72BA56003A3C3F /* Frameworks */,
+				77FBC16A1B72BA56003A3C3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77FBC16E1B72BA56003A3C3F /* PBXTargetDependency */,
+			);
+			name = MarcusChartTests;
+			productName = MarcusChartTests;
+			productReference = 77FBC16C1B72BA56003A3C3F /* MarcusChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77FBC1501B72BA56003A3C3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Marcus McConnell";
+				TargetAttributes = {
+					77FBC1571B72BA56003A3C3F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					77FBC16B1B72BA56003A3C3F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 77FBC1571B72BA56003A3C3F;
+					};
+				};
+			};
+			buildConfigurationList = 77FBC1531B72BA56003A3C3F /* Build configuration list for PBXProject "MarcusChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77FBC14F1B72BA56003A3C3F;
+			productRefGroup = 77FBC1591B72BA56003A3C3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77FBC1571B72BA56003A3C3F /* MarcusChart */,
+				77FBC16B1B72BA56003A3C3F /* MarcusChartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77FBC1561B72BA56003A3C3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */,
+				77FBC1641B72BA56003A3C3F /* Images.xcassets in Resources */,
+				77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */,
+				77FBC1671B72BA56003A3C3F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77FBC16A1B72BA56003A3C3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77FBC1541B72BA56003A3C3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77FBC1861B72D158003A3C3F /* DataSet.swift in Sources */,
+				77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */,
+				77FBC17D1B72BD14003A3C3F /* DataNode.swift in Sources */,
+				77FBC1601B72BA56003A3C3F /* ChartScene.swift in Sources */,
+				77FBC15E1B72BA56003A3C3F /* AppDelegate.swift in Sources */,
+				77FBC17F1B72BF22003A3C3F /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77FBC1681B72BA56003A3C3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77FBC1731B72BA56003A3C3F /* MarcusChartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77FBC16E1B72BA56003A3C3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77FBC1571B72BA56003A3C3F /* MarcusChart */;
+			targetProxy = 77FBC16D1B72BA56003A3C3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77FBC1651B72BA56003A3C3F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77FBC1661B72BA56003A3C3F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77FBC1741B72BA56003A3C3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77FBC1751B72BA56003A3C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77FBC1771B72BA56003A3C3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarcusChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77FBC1781B72BA56003A3C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarcusChart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		77FBC17A1B72BA56003A3C3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MarcusChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcusChart.app/Contents/MacOS/MarcusChart";
+			};
+			name = Debug;
+		};
+		77FBC17B1B72BA56003A3C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MarcusChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarcusChart.app/Contents/MacOS/MarcusChart";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77FBC1531B72BA56003A3C3F /* Build configuration list for PBXProject "MarcusChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77FBC1741B72BA56003A3C3F /* Debug */,
+				77FBC1751B72BA56003A3C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77FBC1761B72BA56003A3C3F /* Build configuration list for PBXNativeTarget "MarcusChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77FBC1771B72BA56003A3C3F /* Debug */,
+				77FBC1781B72BA56003A3C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		77FBC1791B72BA56003A3C3F /* Build configuration list for PBXNativeTarget "MarcusChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77FBC17A1B72BA56003A3C3F /* Debug */,
+				77FBC17B1B72BA56003A3C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77FBC1501B72BA56003A3C3F /* Project object */;
+}
