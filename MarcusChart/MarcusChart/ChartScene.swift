@@ -51,6 +51,10 @@ class ChartScene: SKScene {
     
     private func drawLine(startPoint: CGPoint, endPoint: CGPoint, width: CGFloat, color: SKColor)
     {
+        drawLine(startPoint, endPoint: endPoint, width: width, color: color, lineName: nil)
+    }
+    private func drawLine(startPoint: CGPoint, endPoint: CGPoint, width: CGFloat, color: SKColor, lineName: String?)
+    {
         var s = SKShapeNode()
         var path = CGPathCreateMutable()
         CGPathMoveToPoint(path, nil, startPoint.x, startPoint.y)
@@ -58,6 +62,7 @@ class ChartScene: SKScene {
         s.path = path
         s.strokeColor = color
         s.lineWidth = width
+        s.name = lineName
         self.addChild(s)
     }
     
@@ -218,9 +223,9 @@ class ChartScene: SKScene {
             dateLabel.fontColor = ConstantChartAxisLabelColor
             dateLabel.fontSize = ConstantChartAxisLabelFontSize
             dateLabel.text = dateFormatter.stringFromDate(dateIndex)
-            dateLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
-            dateLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
-            dateLabel.position = CGPoint(x: labelX, y: ConstantChartDataOrigin.y - 20.0)
+            dateLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
+            dateLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Top
+            dateLabel.position = CGPoint(x: labelX, y: ConstantChartDataOrigin.y - 10.0)
             self.addChild(dateLabel)
             
             dateIndex = dateIndex.addDays(1)
@@ -259,16 +264,35 @@ class ChartScene: SKScene {
         }
     }
     
-    func checkForHover()
+    private func checkForHover()
     {
+        let hoverRange = 10.0 as CGFloat
+        
+        drawVerticalLineIfInChart()
+        
         for d in drawables
         {
-            if d.frame.contains(mouseLocation)
+            let hoverRect = CGRectMake(d.position.x - hoverRange, ConstantChartDataOrigin.y, hoverRange * 2, ConstantPlotAreaHeight)
+            
+            if hoverRect.contains(mouseLocation)
             {
                 d.startFocus()
             } else {
                 d.endFocus()
             }
         }
+    }
+    
+    private func drawVerticalLineIfInChart()
+    {
+        self.childNodeWithName("VerticalIndicator")?.removeFromParent()
+        
+        let plotRect = CGRectMake(ConstantChartDataOrigin.x, ConstantChartDataOrigin.y, ConstantPlotAreaWidth, ConstantPlotAreaHeight)
+        
+        if plotRect.contains(self.mouseLocation)
+        {
+            drawLine(CGPoint(x: mouseLocation.x, y: ConstantChartDataOrigin.y), endPoint: CGPoint(x: mouseLocation.x, y:ConstantChartDataOrigin.y + ConstantPlotAreaHeight), width: ConstantDividerWidth, color: ConstantDividerColor, lineName: "VerticalIndicator")
+        }
+        
     }
 }
