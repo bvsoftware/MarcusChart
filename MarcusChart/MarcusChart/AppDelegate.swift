@@ -55,4 +55,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
         return true
     }
+    @IBAction func didRequestAnimation(sender: AnyObject) {
+        
+        self.currentChart!.runAnimations()
+    }
 }

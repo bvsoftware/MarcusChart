@@ -30,3 +30,16 @@ let ConstantChartAxisLabelFontSize = 12.0 as CGFloat
 let ConstantChartAxisLabelFont = "HelveticaNeue"
 let ConstantChartAxisBuffer = 100.0 as CGFloat
 let ConstantChartAxisBufferTail = 40.0 as CGFloat
+
+// Data plotting
+let ConstantPlotAreaWidth = ConstantChartWidth - ConstantChartAxisBuffer - ConstantChartAxisBufferTail
+let ConstantPlotAreaHeight = ConstantChartHeight - ConstantChartAxisBuffer - ConstantChartAxisBufferTail
+let ConstantChartDataOrigin = CGPoint(x: ConstantChartBuffer + ConstantChartAxisBuffer,
+    y: ConstantChartBuffer + ConstantChartAxisBuffer)
+
+// Divider Lines
+let ConstantDividerColor = SKColor(calibratedRed: 0.0, green: 255.0, blue: 0.0, alpha: 0.5)
+let ConstantDividerWidth = 1.0 as CGFloat
+
+// Animation
+let ConstantAnimationTime = 1.5 as NSTimeInterval

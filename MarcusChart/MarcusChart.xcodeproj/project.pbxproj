@@ -18,6 +18,8 @@
 		77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1801B72C50F003A3C3F /* stockprices.json */; };
 		77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1821B72C618003A3C3F /* DataLoader.swift */; };
 		77FBC1861B72D158003A3C3F /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1851B72D158003A3C3F /* DataSet.swift */; };
+		77FBC1881B72FEB2003A3C3F /* DataPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1871B72FEB2003A3C3F /* DataPoint.png */; };
+		77FBC18B1B73028C003A3C3F /* PlotPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC18A1B73028C003A3C3F /* PlotPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		77FBC1801B72C50F003A3C3F /* stockprices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockprices.json; sourceTree = "<group>"; };
 		77FBC1821B72C618003A3C3F /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		77FBC1851B72D158003A3C3F /* DataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		77FBC1871B72FEB2003A3C3F /* DataPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DataPoint.png; sourceTree = "<group>"; };
+		77FBC18A1B73028C003A3C3F /* PlotPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		77FBC15A1B72BA56003A3C3F /* MarcusChart */ = {
 			isa = PBXGroup;
 			children = (
+				77FBC1871B72FEB2003A3C3F /* DataPoint.png */,
 				77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */,
 				77FBC17E1B72BF22003A3C3F /* Constants.swift */,
 				77FBC15F1B72BA56003A3C3F /* ChartScene.swift */,
@@ -94,6 +99,7 @@
 				77FBC1631B72BA56003A3C3F /* Images.xcassets */,
 				77FBC1651B72BA56003A3C3F /* MainMenu.xib */,
 				77FBC1841B72D05E003A3C3F /* Data */,
+				77FBC1891B730237003A3C3F /* Drawables */,
 				77FBC15B1B72BA56003A3C3F /* Supporting Files */,
 			);
 			path = MarcusChart;
@@ -133,6 +139,14 @@
 				77FBC1851B72D158003A3C3F /* DataSet.swift */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		77FBC1891B730237003A3C3F /* Drawables */ = {
+			isa = PBXGroup;
+			children = (
+				77FBC18A1B73028C003A3C3F /* PlotPoint.swift */,
+			);
+			name = Drawables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +232,7 @@
 				77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */,
 				77FBC1641B72BA56003A3C3F /* Images.xcassets in Resources */,
 				77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */,
+				77FBC1881B72FEB2003A3C3F /* DataPoint.png in Resources */,
 				77FBC1671B72BA56003A3C3F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +255,7 @@
 				77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */,
 				77FBC17D1B72BD14003A3C3F /* DataNode.swift in Sources */,
 				77FBC1601B72BA56003A3C3F /* ChartScene.swift in Sources */,
+				77FBC18B1B73028C003A3C3F /* PlotPoint.swift in Sources */,
 				77FBC15E1B72BA56003A3C3F /* AppDelegate.swift in Sources */,
 				77FBC17F1B72BF22003A3C3F /* Constants.swift in Sources */,
 			);

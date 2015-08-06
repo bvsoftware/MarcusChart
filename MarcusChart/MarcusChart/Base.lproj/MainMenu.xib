@@ -66,7 +66,11 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Chart" id="e0v-R3-zQe">
                         <items>
-                            <menuItem title="Animate Chart" keyEquivalent="a" id="v6l-JE-Qh1"/>
+                            <menuItem title="Animate Chart" keyEquivalent="a" id="v6l-JE-Qh1">
+                                <connections>
+                                    <action selector="didRequestAnimation:" target="494" id="tOy-k6-050"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>

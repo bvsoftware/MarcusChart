@@ -10,7 +10,8 @@ import SpriteKit
 
 class ChartScene: SKScene {
     
-    private var data: DataSet?
+    // Holds objects that are drawn on the chart
+    private var drawables = Array<PlotPoint>()
     
     override func didMoveToView(view: SKView) {
     }
@@ -19,7 +20,7 @@ class ChartScene: SKScene {
     {
         drawBorder()
         drawAxisLines()
-        data = DataLoader.LoadJson("stockprices")
+        var data :DataSet? = DataLoader.LoadJson("stockprices")
         if (data == nil || data?.count() < 1)
         {
             let errorLabel = SKLabelNode(fontNamed: ConstantChartAxisLabelFont)
@@ -30,6 +31,9 @@ class ChartScene: SKScene {
             errorLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
             errorLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
             self.addChild(errorLabel)
+        } else {
+            // We have some data, layout the chart
+            generateDrawablesFromData(data!)
         }
         
         /*
@@ -127,5 +131,79 @@ class ChartScene: SKScene {
             color: ConstantChartAxisColor)
         
         
+    }
+    
+    //MARK: Generate Drawables
+    private func generateDrawablesFromData(data: DataSet)
+    {
+        // Generate a range slightly higher/lower than actual
+        // data for legibility. Note: If the data contains only
+        // points located in the same dollar amount this may
+        // push the graph points closer together.
+        let minPriceRange :Double = floor(data.getMinPrice()) - 1
+        let maxPriceRange :Double = ceil(data.getMaxPrice()) + 1
+        let priceRange :Double = maxPriceRange - minPriceRange
+        
+        
+        // Draw horizontal lines for Y-axis values
+        var currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        
+        var dividerValue = minPriceRange + 1.0
+        while (dividerValue < maxPriceRange)
+        {
+            let normalizedDividerScalar :Double = (dividerValue - minPriceRange) / priceRange
+            let dividerOffset :CGFloat = (CGFloat(normalizedDividerScalar) * ConstantPlotAreaHeight)
+            let dividerY = ConstantChartDataOrigin.y + dividerOffset
+            
+            let startPoint = CGPoint(x:ConstantChartDataOrigin.x, y: dividerY)
+            let endPoint = CGPoint(x: ConstantChartDataOrigin.x + ConstantPlotAreaWidth, y: dividerY)
+            drawLine(startPoint, endPoint: endPoint, width: ConstantDividerWidth, color: ConstantDividerColor)
+     
+            
+            var priceLabel = SKLabelNode()
+            priceLabel.fontName = ConstantChartAxisLabelFont
+            priceLabel.fontColor = ConstantChartAxisLabelColor
+            priceLabel.fontSize = ConstantChartAxisLabelFontSize
+            if let formattedPrice = currencyFormatter.stringFromNumber(dividerValue)
+            {
+                priceLabel.text = formattedPrice
+            }
+            priceLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
+            priceLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+            priceLabel.position = CGPoint(x: ConstantChartDataOrigin.x - 10.0, y: dividerY)
+            self.addChild(priceLabel)
+
+            dividerValue += 1
+        }
+        
+        for dataPoint in data.getNodes()
+        {
+            var plotPoint = PlotPoint(imageNamed: "DataPoint")
+            
+            // Normalize Y value (price)
+            let normalizedPriceScalar :Double = (dataPoint.Price - minPriceRange) / priceRange
+            let priceOffset :CGFloat = (CGFloat(normalizedPriceScalar) * ConstantPlotAreaHeight)
+            let finalY = ConstantChartDataOrigin.y + priceOffset
+            
+            // Normalize X value (date)
+            
+            
+            // plot point on chart
+            plotPoint.plottedPosition = CGPoint(x: ConstantChartDataOrigin.x, y: finalY)
+            plotPoint.startingPosition = ConstantChartDataOrigin
+            
+            self.drawables.append(plotPoint)
+            self.addChild(plotPoint)
+            plotPoint.startAnimation()
+        }
+    }
+    
+    func runAnimations()
+    {
+        for plot in drawables
+        {
+            plot.startAnimation()
+        }
     }
 }
