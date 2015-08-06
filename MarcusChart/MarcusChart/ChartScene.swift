@@ -218,11 +218,14 @@ class ChartScene: SKScene {
             let finalY = ConstantChartDataOrigin.y + priceOffset
             
             // Normalize X value (date)
-            
+            let daysFromStart = cal.components(dayUnit, fromDate: startDate, toDate: dataPoint.Date, options: nil)
+            let normalizedDateScalar :Double = (Double(daysFromStart.day) / Double(dateRange.day))
+            let dateOffset :CGFloat = (CGFloat(normalizedDateScalar) * ConstantPlotAreaWidth)
+            let finalX = ConstantChartDataOrigin.x + dateOffset
             
             // plot point on chart
-            plotPoint.plottedPosition = CGPoint(x: ConstantChartDataOrigin.x, y: finalY)
-            plotPoint.startingPosition = ConstantChartDataOrigin
+            plotPoint.plottedPosition = CGPoint(x: finalX, y: finalY)
+            plotPoint.startingPosition = CGPoint(x: finalX, y: ConstantChartDataOrigin.y)
             
             self.drawables.append(plotPoint)
             self.addChild(plotPoint)
