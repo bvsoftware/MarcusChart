@@ -266,7 +266,7 @@ class ChartScene: SKScene {
     
     private func checkForHover()
     {
-        let hoverRange = 10.0 as CGFloat
+        let hoverRange = 16.0 as CGFloat
         
         drawVerticalLineIfInChart()
         
