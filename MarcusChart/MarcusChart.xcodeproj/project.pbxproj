@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		77AB84931B73A38300424235 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AB84921B73A38300424235 /* NSDateExtensions.swift */; };
+		77AB84951B73B23000424235 /* datapoint.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 77AB84941B73B23000424235 /* datapoint.atlas */; };
 		77FBC15E1B72BA56003A3C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */; };
 		77FBC1601B72BA56003A3C3F /* ChartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15F1B72BA56003A3C3F /* ChartScene.swift */; };
 		77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1611B72BA56003A3C3F /* ChartScene.sks */; };
@@ -19,7 +20,6 @@
 		77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1801B72C50F003A3C3F /* stockprices.json */; };
 		77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1821B72C618003A3C3F /* DataLoader.swift */; };
 		77FBC1861B72D158003A3C3F /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC1851B72D158003A3C3F /* DataSet.swift */; };
-		77FBC1881B72FEB2003A3C3F /* DataPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1871B72FEB2003A3C3F /* DataPoint.png */; };
 		77FBC18B1B73028C003A3C3F /* PlotPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC18A1B73028C003A3C3F /* PlotPoint.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		77AB84921B73A38300424235 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
+		77AB84941B73B23000424235 /* datapoint.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = datapoint.atlas; sourceTree = "<group>"; };
 		77FBC1581B72BA56003A3C3F /* MarcusChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcusChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FBC15C1B72BA56003A3C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		77FBC1801B72C50F003A3C3F /* stockprices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockprices.json; sourceTree = "<group>"; };
 		77FBC1821B72C618003A3C3F /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		77FBC1851B72D158003A3C3F /* DataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
-		77FBC1871B72FEB2003A3C3F /* DataPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DataPoint.png; sourceTree = "<group>"; };
 		77FBC18A1B73028C003A3C3F /* PlotPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 		77FBC15A1B72BA56003A3C3F /* MarcusChart */ = {
 			isa = PBXGroup;
 			children = (
-				77FBC1871B72FEB2003A3C3F /* DataPoint.png */,
+				77AB84941B73B23000424235 /* datapoint.atlas */,
 				77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */,
 				77FBC17E1B72BF22003A3C3F /* Constants.swift */,
 				77FBC15F1B72BA56003A3C3F /* ChartScene.swift */,
@@ -235,7 +235,7 @@
 				77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */,
 				77FBC1641B72BA56003A3C3F /* Images.xcassets in Resources */,
 				77FBC1811B72C50F003A3C3F /* stockprices.json in Resources */,
-				77FBC1881B72FEB2003A3C3F /* DataPoint.png in Resources */,
+				77AB84951B73B23000424235 /* datapoint.atlas in Resources */,
 				77FBC1671B72BA56003A3C3F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

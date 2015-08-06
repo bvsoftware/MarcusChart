@@ -12,6 +12,7 @@ class ChartScene: SKScene {
     
     // Holds objects that are drawn on the chart
     private var drawables = Array<PlotPoint>()
+    private var mouseLocation :CGPoint = CGPointZero
     
     override func didMoveToView(view: SKView) {
     }
@@ -35,28 +36,17 @@ class ChartScene: SKScene {
             // We have some data, layout the chart
             generateDrawablesFromData(data!)
         }
-        
-        /*
-        // FOR DEBUGGING
-        for p in data!.getNodes()
-        {
-            NSLog("Price: \(p.Price), Date: \(p.Date)")
-        }
-        
-        NSLog("Price: \(data!.getMinPrice()), \(data!.getMaxPrice())")
-        NSLog("Date: \(data!.getMinDate()), \(data!.getMaxDate())")
-        */
     }
     
     override func mouseMoved(theEvent: NSEvent) {
         /* Code to track mouse movement */
-        let location = theEvent.locationInNode(self)
-        
+        self.mouseLocation = theEvent.locationInNode(self)
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         connectTheDots()
+        checkForHover()
     }
     
     private func drawLine(startPoint: CGPoint, endPoint: CGPoint, width: CGFloat, color: SKColor)
@@ -71,6 +61,9 @@ class ChartScene: SKScene {
         self.addChild(s)
     }
     
+    // TODO: Not happy that I'm clearing and redrawing the path
+    // for every frame. Investigate how to transform path points
+    // instead of recreating each time
     private func connectTheDots()
     {
         // Delete Previous Line
@@ -79,7 +72,6 @@ class ChartScene: SKScene {
         if (drawables.count > 1)
         {
             // Only draw lines if we have more than one point
-            
             var line = SKShapeNode()
             line.name = "DataLine"
             var path = CGPathCreateMutable()
@@ -95,11 +87,6 @@ class ChartScene: SKScene {
             line.lineWidth = ConstantPlotLineWidth
             self.addChild(line)
         }
-
-        
-        
-        
-        
     }
     
     // Draws the rectangle border around the chart
@@ -269,6 +256,19 @@ class ChartScene: SKScene {
         for plot in drawables
         {
             plot.startAnimation()
+        }
+    }
+    
+    func checkForHover()
+    {
+        for d in drawables
+        {
+            if d.frame.contains(mouseLocation)
+            {
+                d.startFocus()
+            } else {
+                d.endFocus()
+            }
         }
     }
 }
