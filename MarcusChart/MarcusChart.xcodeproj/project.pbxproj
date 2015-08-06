@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77AB84931B73A38300424235 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AB84921B73A38300424235 /* NSDateExtensions.swift */; };
 		77FBC15E1B72BA56003A3C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */; };
 		77FBC1601B72BA56003A3C3F /* ChartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBC15F1B72BA56003A3C3F /* ChartScene.swift */; };
 		77FBC1621B72BA56003A3C3F /* ChartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 77FBC1611B72BA56003A3C3F /* ChartScene.sks */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77AB84921B73A38300424235 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		77FBC1581B72BA56003A3C3F /* MarcusChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcusChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FBC15C1B72BA56003A3C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77FBC15D1B72BA56003A3C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				77FBC1841B72D05E003A3C3F /* Data */,
 				77FBC1891B730237003A3C3F /* Drawables */,
 				77FBC15B1B72BA56003A3C3F /* Supporting Files */,
+				77AB84921B73A38300424235 /* NSDateExtensions.swift */,
 			);
 			path = MarcusChart;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AB84931B73A38300424235 /* NSDateExtensions.swift in Sources */,
 				77FBC1861B72D158003A3C3F /* DataSet.swift in Sources */,
 				77FBC1831B72C618003A3C3F /* DataLoader.swift in Sources */,
 				77FBC17D1B72BD14003A3C3F /* DataNode.swift in Sources */,
@@ -448,6 +452,7 @@
 				77FBC1781B72BA56003A3C3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77FBC1791B72BA56003A3C3F /* Build configuration list for PBXNativeTarget "MarcusChartTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +461,7 @@
 				77FBC17B1B72BA56003A3C3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -144,6 +144,12 @@ class ChartScene: SKScene {
         let maxPriceRange :Double = ceil(data.getMaxPrice()) + 1
         let priceRange :Double = maxPriceRange - minPriceRange
         
+        let startDate = data.getMinDate().addDays(-1)
+        let endDate = data.getMaxDate().addDays(1)
+        let cal = NSCalendar.currentCalendar()
+        let dayUnit:NSCalendarUnit = .CalendarUnitDay
+        let dateRange = cal.components(dayUnit, fromDate: startDate, toDate: endDate, options: nil)
+
         
         // Draw horizontal lines for Y-axis values
         var currencyFormatter = NSNumberFormatter()
@@ -175,6 +181,31 @@ class ChartScene: SKScene {
             self.addChild(priceLabel)
 
             dividerValue += 1
+        }
+        
+        // Draw Date Labels for X-axis
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "M/d"
+        
+        var dateIndex = startDate.addDays(1)
+        while (dateIndex.compare(endDate) == NSComparisonResult.OrderedAscending)
+        {
+            let daysFromStart = cal.components(dayUnit, fromDate: startDate, toDate: dateIndex, options: nil)
+            let normalizedDateScalar :Double = (Double(daysFromStart.day) / Double(dateRange.day))
+            let dateOffset :CGFloat = (CGFloat(normalizedDateScalar) * ConstantPlotAreaWidth)
+            let labelX = ConstantChartDataOrigin.x + dateOffset
+            
+            var dateLabel = SKLabelNode()
+            dateLabel.fontName = ConstantChartAxisLabelFont
+            dateLabel.fontColor = ConstantChartAxisLabelColor
+            dateLabel.fontSize = ConstantChartAxisLabelFontSize
+            dateLabel.text = dateFormatter.stringFromDate(dateIndex)
+            dateLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
+            dateLabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+            dateLabel.position = CGPoint(x: labelX, y: ConstantChartDataOrigin.y - 20.0)
+            self.addChild(dateLabel)
+            
+            dateIndex = dateIndex.addDays(1)
         }
         
         for dataPoint in data.getNodes()

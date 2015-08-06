@@ -38,7 +38,7 @@ let ConstantChartDataOrigin = CGPoint(x: ConstantChartBuffer + ConstantChartAxis
     y: ConstantChartBuffer + ConstantChartAxisBuffer)
 
 // Divider Lines
-let ConstantDividerColor = SKColor(calibratedRed: 0.0, green: 255.0, blue: 0.0, alpha: 0.5)
+let ConstantDividerColor = SKColor(calibratedRed: 255.0, green: 255.0, blue: 255.0, alpha: 0.5)
 let ConstantDividerWidth = 1.0 as CGFloat
 
 // Animation
