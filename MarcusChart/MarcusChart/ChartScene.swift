@@ -10,7 +10,7 @@ import SpriteKit
 
 class ChartScene: SKScene {
     
-    private var dataNodes = Array<DataNode>()
+    private var data: DataSet?
     
     override func didMoveToView(view: SKView) {
     }
@@ -18,8 +18,9 @@ class ChartScene: SKScene {
     func setupChart()
     {
         drawBorder()
-        dataNodes = DataLoader.LoadJson("stockprices")
-        if (dataNodes.count < 1)
+        drawAxisLines()
+        data = DataLoader.LoadJson("stockprices")
+        if (data == nil || data?.count() < 1)
         {
             let errorLabel = SKLabelNode(fontNamed: ConstantChartAxisLabelFont)
             errorLabel.fontColor = SKColor.redColor()
@@ -31,11 +32,16 @@ class ChartScene: SKScene {
             self.addChild(errorLabel)
         }
         
-        for p in dataNodes
+        /*
+        // FOR DEBUGGING
+        for p in data!.getNodes()
         {
             NSLog("Price: \(p.Price), Date: \(p.Date)")
         }
-
+        
+        NSLog("Price: \(data!.getMinPrice()), \(data!.getMaxPrice())")
+        NSLog("Date: \(data!.getMinDate()), \(data!.getMaxDate())")
+        */
     }
     
     override func mouseMoved(theEvent: NSEvent) {
@@ -96,6 +102,30 @@ class ChartScene: SKScene {
             endPoint: CGPoint(x: endX, y: endY),
             width: ConstantChartBorderWidth,
             color: ConstantChartBorderColor)
+        
+    }
+    
+    private func drawAxisLines()
+    {
+        let buffer = ConstantChartBuffer + ConstantChartAxisBuffer
+        let startX = buffer
+        let startY = buffer
+        let bufferTail = ConstantChartBuffer + ConstantChartAxisBufferTail
+        let endX = ConstantChartTotalWidth - bufferTail
+        let endY = ConstantChartTotalHeight - bufferTail
+        
+        // X Axis
+        drawLine(CGPoint(x: startX, y: startY),
+            endPoint: CGPoint(x: endX, y: startY),
+            width: ConstantChartAxisWidth,
+            color: ConstantChartAxisColor)
+        
+        // Y Axis
+        drawLine(CGPoint(x: startX, y: startY),
+            endPoint: CGPoint(x: startX, y: endY),
+            width: ConstantChartAxisWidth,
+            color: ConstantChartAxisColor)
+        
         
     }
 }

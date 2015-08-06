@@ -11,9 +11,9 @@ import Foundation
 class DataLoader
 {
 
-    class func LoadJson(fileName: String) -> Array<DataNode>
+    class func LoadJson(fileName: String) -> DataSet
     {
-        var data = Array<DataNode>()
+        var data = DataSet()
         
         if let path = NSBundle.mainBundle().pathForResource(fileName as String, ofType: "json")
         {
@@ -23,13 +23,13 @@ class DataLoader
                 {
                     if let stockdata : NSArray = jsonResult["stockdata"] as? NSArray
                     {
-                        let c = stockdata.count
-                        var index = 0
-                        
                         let dateFormatter = NSDateFormatter()
                         dateFormatter.dateFormat = "yyyy-MM-dd"
+
+                        let count = stockdata.count
+                        var index = 0
                         
-                        for index in 0..<c
+                        for index in 0..<count
                         {
                             if let priceData = stockdata[index] as? NSDictionary
                             {
