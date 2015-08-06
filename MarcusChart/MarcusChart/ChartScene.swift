@@ -56,6 +56,7 @@ class ChartScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        connectTheDots()
     }
     
     private func drawLine(startPoint: CGPoint, endPoint: CGPoint, width: CGFloat, color: SKColor)
@@ -68,6 +69,36 @@ class ChartScene: SKScene {
         s.strokeColor = color
         s.lineWidth = width
         self.addChild(s)
+    }
+    
+    private func connectTheDots()
+    {
+        // Delete Previous Line
+        self.childNodeWithName("DataLine")?.removeFromParent()
+
+        if (drawables.count > 1)
+        {
+            // Only draw lines if we have more than one point
+            
+            var line = SKShapeNode()
+            line.name = "DataLine"
+            var path = CGPathCreateMutable()
+            CGPathMoveToPoint(path, nil, drawables[0].position.x, drawables[0].position.y)
+            
+            for i in 1..<drawables.count
+            {
+                CGPathAddLineToPoint(path, nil, drawables[i].position.x, drawables[i].position.y)
+            }
+            
+            line.path = path
+            line.strokeColor = ConstantPlotLineColor
+            line.lineWidth = ConstantPlotLineWidth
+            self.addChild(line)
+        }
+
+        
+        
+        
         
     }
     

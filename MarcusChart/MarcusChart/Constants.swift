@@ -36,7 +36,8 @@ let ConstantPlotAreaWidth = ConstantChartWidth - ConstantChartAxisBuffer - Const
 let ConstantPlotAreaHeight = ConstantChartHeight - ConstantChartAxisBuffer - ConstantChartAxisBufferTail
 let ConstantChartDataOrigin = CGPoint(x: ConstantChartBuffer + ConstantChartAxisBuffer,
     y: ConstantChartBuffer + ConstantChartAxisBuffer)
-
+let ConstantPlotLineColor = SKColor.greenColor()
+let ConstantPlotLineWidth = 5.0 as CGFloat
 // Divider Lines
 let ConstantDividerColor = SKColor(calibratedRed: 255.0, green: 255.0, blue: 255.0, alpha: 0.5)
 let ConstantDividerWidth = 1.0 as CGFloat
